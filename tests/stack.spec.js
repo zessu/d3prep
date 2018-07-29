@@ -12,20 +12,21 @@ describe('Stack', () => {
   describe('when we push to the stack', () => {
     it('it pushes "1" onto the stack', () => {
       stack.push(1);
-      expect(stack.size()).to.equal(1);
+      expect(stack.size()).toEqual(1);
     });
 
     it('it pushes "2" onto the stack', () => {
       stack.push(2);
-      expect(stack.size()).to.equal(2);
+      expect(stack.size()).toEqual(2);
     });
 
-    it('it has a size of 4', () => {
-      expect(stack.size()).to.equal(4);
+    it('it has a size of 3', () => {
+      stack.push(3);
+      expect(stack.size()).toEqual(3);
     });
 
     it('it prints all the elements we have just pushed onto the stack', () => {
-      expect(stack.print()).to.equal('1 2 3 4');
+      expect(stack.print()).toEqual([1, 2, 3]);
     });
   });
 });
