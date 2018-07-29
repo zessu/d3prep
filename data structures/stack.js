@@ -1,5 +1,4 @@
 class Stack {
-
   constructor() {
     this.data = {};
     this.count = 0;
@@ -12,7 +11,7 @@ class Stack {
    */
   push(element) {
     this.data[this.count] = element;
-    this.count++;
+    this.count += 1;
     return this.count;
   }
 
@@ -24,9 +23,9 @@ class Stack {
     if (this.count === 0) {
       return;
     }
-    this.count--;
+    this.count -= 1;
     delete this.data[this.count];
-    this.count--;
+    this.count -= 1;
   }
 
   /**
@@ -50,7 +49,7 @@ class Stack {
    * @return {any} element at the top of the stack
    */
   peek() {
-    return this.data[count];
+    return this.data[this.count];
   }
 
   /**
@@ -68,7 +67,6 @@ class Stack {
   print() {
     return Object.values(this.data);
   }
-
 }
 
 module.exports = Stack;
