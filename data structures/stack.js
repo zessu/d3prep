@@ -17,15 +17,15 @@ class Stack {
 
   /**
    * remove element from the top of the stack
-   * @return { number } number of elements on the stack
+   * @return { any } item removed from the stack
    */
   pop() {
     if (this.count === 0) {
-      return;
+      return 'stack is empty';
     }
-    this.count -= 1;
+    const element = this.data[--this.count];
     delete this.data[this.count];
-    this.count -= 1;
+    return element;
   }
 
   /**
@@ -49,7 +49,11 @@ class Stack {
    * @return {any} element at the top of the stack
    */
   peek() {
-    return this.data[this.count];
+    if (this.count === 0) {
+      return 'stack is empty';
+    }
+    let index = this.count
+    return this.data[index - 1];
   }
 
   /**

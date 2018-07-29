@@ -1,12 +1,11 @@
 import Stack from '../data structures/stack';
 
 describe('Stack', () => {
-  beforeEach(() => { });
-
   const stack = new Stack();
 
   it('creates a new stack', () => {
     expect(stack).toBeDefined();
+    expect(stack).toBeInstanceOf(Stack);
   });
 
   describe('when we push to the stack', () => {
@@ -28,5 +27,43 @@ describe('Stack', () => {
     it('it prints all the elements we have just pushed onto the stack', () => {
       expect(stack.print()).toEqual([1, 2, 3]);
     });
+  });
+
+  describe('when we peek, pop from the stack', () => {
+    it('it peeks onto the stack', () => {
+      expect(stack.peek()).toEqual(3);
+    });
+
+    it('it pops onto the stack', () => {
+      expect(stack.pop()).toEqual(3);
+      expect(stack.size()).toBe(2);
+    });
+
+    it('it peeks onto the stack', () => {
+      expect(stack.peek()).toEqual(2);
+    });
+
+    it('it pops onto the stack', () => {
+      expect(stack.pop()).toEqual(2);
+      expect(stack.size()).toBe(1);
+    });
+
+    it('it peeks onto the stack', () => {
+      expect(stack.peek()).toEqual(1);
+    });
+
+    it('it pops onto the stack', () => {
+      expect(stack.pop()).toEqual(1);
+      expect(stack.size()).toBe(0);
+    });
+
+    it('it returns when stack is empty', () => {
+      expect(stack.pop()).toMatch(/stack is empty/);
+    });
+
+    it('it returns stack empty on empty stack', () => {
+      expect(stack.peek()).toMatch(/stack is empty/);
+    });
+
   });
 });

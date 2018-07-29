@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --watchAll --verbose"
+    "test": "jest --coverage --watchAll --verbose",
+    "precommit": "npm test",
+    "prepush": "npm test"
   },
   "author": "Wambua Makenzi",
   "license": "ISC",
@@ -20,6 +22,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "eslint-plugin-compat": "^2.5.1"
+    "eslint-plugin-compat": "^2.5.1",
+    "husky": "^0.14.3"
   }
 }
