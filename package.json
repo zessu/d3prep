@@ -2,9 +2,9 @@
   "name": "learning-algorithms",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "test": "ndb jest --coverage",
+    "test": "jest --coverage",
     "precommit": "npm test",
     "prepush": "npm test"
   },

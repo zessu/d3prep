@@ -24,7 +24,7 @@ export default class Queue {
     if (this.front === this.rear) {
       return 'queue is empty';
     }
-    this.data.shift();
+    this.data.shift(); // remove from the front
     this.rear -= 1;
     return this.rear;
   }
