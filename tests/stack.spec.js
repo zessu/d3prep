@@ -65,5 +65,15 @@ describe('Stack', () => {
       expect(stack.peek()).toMatch(/stack is empty/);
     });
 
+    it('it returns true when array is empty', () => {
+      expect(stack.isEmpty()).toBeTruthy();
+    })
+  });
+
+  describe('clear stack', () => {
+    stack.push(1);
+    expect(stack.size()).toBe(1);
+    stack.clear();
+    expect(stack.size()).toBe(0);
   });
 });

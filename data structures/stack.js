@@ -23,7 +23,8 @@ class Stack {
     if (this.count === 0) {
       return 'stack is empty';
     }
-    const element = this.data[--this.count];
+    this.count -= 1;
+    const element = this.data[this.count];
     delete this.data[this.count];
     return element;
   }
@@ -52,7 +53,7 @@ class Stack {
     if (this.count === 0) {
       return 'stack is empty';
     }
-    let index = this.count
+    const index = this.count;
     return this.data[index - 1];
   }
 
