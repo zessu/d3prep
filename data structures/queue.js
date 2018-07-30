@@ -18,7 +18,7 @@ export default class Queue {
 
   /**
    *
-   * @return { number } index of last item on queue
+   * @return { number } index of the last item in the queue
    */
   dequeue() {
     if (this.front === this.rear) {
@@ -44,7 +44,7 @@ export default class Queue {
    * @return { number } the size of the queue
    */
   size() {
-    return this.rear + 1;
+    return this.rear;
   }
 
   /**
@@ -63,21 +63,40 @@ export default class Queue {
   }
 
   /**
- * check wheteher an element exists in the queue
- * @param  {any} element the element to search
- * @return {boolean}
- */
+   * check wheteher an element exists in the queue
+   * @param  {any} element the element to search
+   * @return {boolean}
+   */
   contains(element) {
     return this.data.includes(element);
   }
 
   /**
+   * return element at the front of the queue
+   * @return { any } element at front of the queue
+   */
+  qfront() {
+    return this.data[this.front];
+  }
+
+  /**
+   * return element at the rear of the queue
+   * @return { any } element at rear of the queue
+   */
+  qback() {
+    const index = this.rear - 1;
+    return this.data[index];
+  }
+
+  /**
    *
    * clears the queue
+   * @return { boolean } whether the queue was cleared or now
    */
   clear() {
     this.data = [];
     this.front = 0;
     this.rear = 0;
+    return (this.rear - this.front) === 0;
   }
 }
