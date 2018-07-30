@@ -1,4 +1,4 @@
-class Stack {
+export default class Stack {
   constructor() {
     this.data = {};
     this.count = 0;
@@ -73,5 +73,3 @@ class Stack {
     return Object.values(this.data);
   }
 }
-
-module.exports = Stack;
