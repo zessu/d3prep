@@ -8,7 +8,8 @@
       2
     ],
     "no-unexpected-multiline": 2,
-    "compat/compat": 2
+    "compat/compat": 2,
+    "no-param-reassign": 0
   },
   "env": {
     "jest": true

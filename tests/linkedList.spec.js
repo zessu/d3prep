@@ -1,4 +1,4 @@
-import { LinkedList } from '../data structures/linkedList';
+import LinkedList from '../data structures/linkedList';
 
 describe('linkedlist', () => {
   const linkedlist = new LinkedList();

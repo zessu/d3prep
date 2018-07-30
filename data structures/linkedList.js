@@ -5,7 +5,7 @@ export class Node {
   }
 }
 
-export class LinkedList {
+export default class LinkedList {
   constructor() {
     this.length = 0;
     this.head = null; // pointer to this linked lists head
