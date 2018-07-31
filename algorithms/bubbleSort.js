@@ -9,6 +9,6 @@ export default function bubbleSort(array) {
         sorted = false;
       }
     }
-    if (sorted) break;
+    if (sorted) break; // we went through loop without sorting, is already sorted
   }
 }

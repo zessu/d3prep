@@ -5,7 +5,7 @@ describe('bubblesort', () => {
 
   it('should successfully sort array', () => {
     bubbleSort(array);
-    expect(array).toEqual([1, 2, 2, 7, 10]);
     expect(array).toBeInstanceOf(Array);
+    expect(array).toEqual([1, 2, 2, 7, 10]);
   });
 });
