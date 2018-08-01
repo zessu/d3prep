@@ -1,12 +1,12 @@
 export default function insertionSort(array) {
   for (let i = 1; i < array.length; i += 1) {
-    const value = array[i];
+    const sorted = array[i];
     let j = i - 1;
-    while (j >= 0 && array[j] > value) {
+    while (j >= 0 && array[j] > sorted) {
       array[j + 1] = array[j];
       j -= 1;
     }
-    array[j + 1] = value;
+    array[j + 1] = sorted;
   }
   return array;
 }
